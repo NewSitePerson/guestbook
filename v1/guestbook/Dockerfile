@@ -24,7 +24,7 @@ RUN go build -o main main.go
 
 FROM ubuntu:18.04
 
-<Please fill in the required Docker command> --from=builder /app/main /app/guestbook
+COPY --from=builder /app/main /app/guestbook
 
 <Please fill in the required Docker command> public/index.html /app/public/index.html
 <Please fill in the required Docker command> public/script.js /app/public/script.js
